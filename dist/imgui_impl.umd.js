@@ -1,6 +1,6 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('imgui-js')) :
-    typeof define === 'function' && define.amd ? define(['exports', 'imgui-js'], factory) :
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('#imgui-js')) :
+    typeof define === 'function' && define.amd ? define(['exports', '#imgui-js'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ImGui_Impl = {}, global.ImGui));
 })(this, (function (exports, ImGui) { 'use strict';
 
@@ -24,6 +24,7 @@
 
     var ImGui__namespace = /*#__PURE__*/_interopNamespace(ImGui);
 
+    // @ts-ignore
     let clipboard_text = "";
     let canvas = null;
     exports.gl = null;
@@ -819,6 +820,7 @@
         g_FragHandle = null;
     }
 
+    exports.ImGui = ImGui__namespace;
     exports.CreateDeviceObjects = CreateDeviceObjects;
     exports.CreateFontsTexture = CreateFontsTexture;
     exports.DestroyDeviceObjects = DestroyDeviceObjects;

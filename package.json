@@ -2,8 +2,19 @@
   "name": "imgui-js",
   "version": "1.0.0",
   "description": "JavaScript bindings for Dear ImGui using Emscripten and TypeScript",
-  "main": "imgui.js",
-  "types": "imgui.ts",
+  "main": "dist/imgui_impl.umd.js",
+  "types": "dist/imgui_impl.d.ts",
+  "imports": {
+    "#imgui-js": {
+      "node": "./dist/imgui.umd.js",
+      "default": "./dist/imgui.umd.js"
+    }
+  },
+  "exports": {
+    "import": "./dist/imgui_impl.umd.js",
+    "require": "./dist/imgui_impl.umd.js",
+    "default": "./dist/imgui_impl.umd.js"
+  },
   "scripts": {
     "build": "make build-bind-imgui && npm run build-imgui",
     "clean": "make clean-bind-imgui && npm run clean-imgui",

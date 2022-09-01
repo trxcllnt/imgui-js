@@ -1,4 +1,7 @@
-import * as ImGui from "imgui-js";
+// @ts-ignore
+import * as ImGui from "#imgui-js";
+
+export { ImGui };
 
 let clipboard_text: string = "";
 

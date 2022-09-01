@@ -7,7 +7,7 @@ const tsconfigOverride = {
   compilerOptions: {
     target: "ES2015",
     module: "ES2015",
-    declaration: false,
+    declaration: true,
   }
 };
 
@@ -23,7 +23,7 @@ export default [
     plugins: [
       alias({
         entries: [
-          { find: 'bind-imgui', replacement: './build/bind-imgui.js' },
+          { find: './bind-imgui', replacement: './build/bind-imgui.js' },
         ]
       }),
       typescript({

@@ -784,6 +784,7 @@ System.register(["imgui-js"], function (exports_1, context_1) {
             }
         ],
         execute: function () {
+            exports_1("ImGui", ImGui);
             clipboard_text = "";
             canvas = null;
             exports_1("gl", gl = null);
